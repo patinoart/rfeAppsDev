@@ -8,21 +8,26 @@
 
 #import "rfeCenterViewController.h"
 
+#import "rfeSessionDetailViewController.h"
+#import "rfeSessionDataController.h"
+#import "rfeSession.h"
+
 @interface rfeCenterViewController ()
 
 @end
 
 @implementation rfeCenterViewController
 
-@synthesize titleLabel;
+@synthesize cell;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+@synthesize titleLabel;
+@synthesize cellTitleLabel;
+
+- (void)awakeFromNib {
+    
+    [super awakeFromNib];
+    
+    self.dataController = [[rfeSessionDataController alloc] init];
 }
 
 - (void)viewDidLoad
@@ -34,12 +39,19 @@
     
     self.navigationItem.title = titleLabel;
     
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil];
-    self.navigationItem.rightBarButtonItem = rightButton;
-    NSLog(@"Button Pressed");
+
     
+//    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil];
+//    self.navigationItem.rightBarButtonItem = rightButton;
+//    NSLog(@"Button Pressed");
     
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor whiteColor];
+//    
+//    UITableView *tableView = [[[UITableView alloc] init] autorelease];
+//    tableView.dataSource = self;
+//    tableView.delegate = self;
+//    [self.view addSubview:tableView];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,5 +59,71 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - TableView
+
+- (NSUInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.dataController countOfList];
+    NSLog(@"Count of List is %i", [self.dataController countOfList]);
+}
+
+// Customize the appearance of table view cells.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *cellIdentifier = @"Cell";
+    static NSDateFormatter *formatter = nil;
+    
+    if (formatter == nil) {
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterShortStyle];
+    }
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    // Set up the cell
+    rfeSession *sessionAtIndex = [self.dataController objectInListAtIndex:indexPath.row];
+    // configuring the cell
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%@", [sessionAtIndex.bodyPart objectAtIndex:1]]];
+    [[cell detailTextLabel] setText:[formatter stringFromDate:(NSDate *)sessionAtIndex.date]];
+    
+    return cell;
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the specified item to be editable.
+    return NO;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

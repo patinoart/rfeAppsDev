@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface rfeJADebugViewController : UIViewController
+@interface rfeJADebugViewController : UITableViewController
 
 @end

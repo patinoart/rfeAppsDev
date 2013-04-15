@@ -8,8 +8,15 @@
 
 #import "rfeJADebugViewController.h"
 
+@class rfeSessionDataController;
+
 @interface rfeCenterViewController : rfeJADebugViewController
 
+@property (strong, nonatomic) rfeSessionDataController *dataController;
+
+@property (strong, nonatomic) IBOutlet UITableViewCell *cell;
+
 @property (strong, nonatomic) NSString *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *cellTitleLabel;
 
 @end

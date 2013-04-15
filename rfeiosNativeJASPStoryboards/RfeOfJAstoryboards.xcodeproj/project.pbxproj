@@ -10,16 +10,11 @@
 		0D459E8A171A3B990096D10A /* Globals.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D459E89171A3B990096D10A /* Globals.mm */; };
 		0D459E8C171A406C0096D10A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D459E8B171A406C0096D10A /* Icon@2x.png */; };
 		0D459E8E171A40A20096D10A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D459E8D171A40A20096D10A /* Icon.png */; };
-		0DBFC688171A274E001CDA22 /* rfeAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFC67F171A274E001CDA22 /* rfeAppDelegate.mm */; };
-		0DBFC689171A274E001CDA22 /* rfeCenterViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFC681171A274E001CDA22 /* rfeCenterViewController.mm */; };
-		0DBFC68A171A274E001CDA22 /* rfeJADebugViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFC683171A274E001CDA22 /* rfeJADebugViewController.mm */; };
-		0DBFC68B171A274E001CDA22 /* rfeLeftViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFC685171A274E001CDA22 /* rfeLeftViewController.mm */; };
-		0DBFC68C171A274E001CDA22 /* rfeRightViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFC687171A274E001CDA22 /* rfeRightViewController.mm */; };
 		0DBFC695171A2824001CDA22 /* JASidePanelController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFC692171A2824001CDA22 /* JASidePanelController.mm */; };
 		0DBFC696171A2824001CDA22 /* UIViewController+JASidePanel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFC694171A2824001CDA22 /* UIViewController+JASidePanel.mm */; };
-		0DE99DBA171B1D0C0057BB4B /* rfeSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99DB9171B1D0C0057BB4B /* rfeSession.mm */; };
-		0DE99DBD171B2A180057BB4B /* rfeSessionDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99DBC171B2A180057BB4B /* rfeSessionDataController.m */; };
-		0DE99DC0171B31920057BB4B /* rfeSessionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99DBF171B31920057BB4B /* rfeSessionDetailViewController.m */; };
+		0DE99DEA171B5A8C0057BB4B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE99DE9171B5A8C0057BB4B /* MainStoryboard.storyboard */; };
+		0DE99DED171B5B700057BB4B /* rfeAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99DEC171B5B700057BB4B /* rfeAppDelegate.mm */; };
+		0DF319A6171C51FA007E1B95 /* rfeSidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF319A5171C51FA007E1B95 /* rfeSidePanelController.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
@@ -59,28 +54,17 @@
 		0D459E89171A3B990096D10A /* Globals.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Globals.mm; sourceTree = "<group>"; };
 		0D459E8B171A406C0096D10A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		0D459E8D171A40A20096D10A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		0DBFC67E171A274E001CDA22 /* rfeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeAppDelegate.h; sourceTree = "<group>"; };
-		0DBFC67F171A274E001CDA22 /* rfeAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rfeAppDelegate.mm; sourceTree = "<group>"; };
-		0DBFC680171A274E001CDA22 /* rfeCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeCenterViewController.h; sourceTree = "<group>"; };
-		0DBFC681171A274E001CDA22 /* rfeCenterViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rfeCenterViewController.mm; sourceTree = "<group>"; };
-		0DBFC682171A274E001CDA22 /* rfeJADebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeJADebugViewController.h; sourceTree = "<group>"; };
-		0DBFC683171A274E001CDA22 /* rfeJADebugViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rfeJADebugViewController.mm; sourceTree = "<group>"; };
-		0DBFC684171A274E001CDA22 /* rfeLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeLeftViewController.h; sourceTree = "<group>"; };
-		0DBFC685171A274E001CDA22 /* rfeLeftViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rfeLeftViewController.mm; sourceTree = "<group>"; };
-		0DBFC686171A274E001CDA22 /* rfeRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeRightViewController.h; sourceTree = "<group>"; };
-		0DBFC687171A274E001CDA22 /* rfeRightViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rfeRightViewController.mm; sourceTree = "<group>"; };
 		0DBFC691171A2824001CDA22 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
 		0DBFC692171A2824001CDA22 /* JASidePanelController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JASidePanelController.mm; sourceTree = "<group>"; };
 		0DBFC693171A2824001CDA22 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
 		0DBFC694171A2824001CDA22 /* UIViewController+JASidePanel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIViewController+JASidePanel.mm"; sourceTree = "<group>"; };
-		0DE99DB8171B1D0C0057BB4B /* rfeSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rfeSession.h; path = src/rfeSession.h; sourceTree = SOURCE_ROOT; };
-		0DE99DB9171B1D0C0057BB4B /* rfeSession.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = rfeSession.mm; path = src/rfeSession.mm; sourceTree = SOURCE_ROOT; };
-		0DE99DBB171B2A180057BB4B /* rfeSessionDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeSessionDataController.h; sourceTree = "<group>"; };
-		0DE99DBC171B2A180057BB4B /* rfeSessionDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rfeSessionDataController.m; sourceTree = "<group>"; };
-		0DE99DBE171B31920057BB4B /* rfeSessionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeSessionDetailViewController.h; sourceTree = "<group>"; };
-		0DE99DBF171B31920057BB4B /* rfeSessionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rfeSessionDetailViewController.m; sourceTree = "<group>"; };
+		0DE99DE9171B5A8C0057BB4B /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0DE99DEB171B5B700057BB4B /* rfeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeAppDelegate.h; sourceTree = "<group>"; };
+		0DE99DEC171B5B700057BB4B /* rfeAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rfeAppDelegate.mm; sourceTree = "<group>"; };
+		0DF319A4171C51FA007E1B95 /* rfeSidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeSidePanelController.h; sourceTree = "<group>"; };
+		0DF319A5171C51FA007E1B95 /* rfeSidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rfeSidePanelController.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* RfeOfJATest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RfeOfJATest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* RfeOfJAstoryboards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RfeOfJAstoryboards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* iPhone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Prefix.pch; sourceTree = "<group>"; };
@@ -127,21 +111,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D814727171C3E97005C294B /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				0DE99DBE171B31920057BB4B /* rfeSessionDetailViewController.h */,
-				0DE99DBF171B31920057BB4B /* rfeSessionDetailViewController.m */,
-				0DBFC680171A274E001CDA22 /* rfeCenterViewController.h */,
-				0DBFC681171A274E001CDA22 /* rfeCenterViewController.mm */,
-				0DBFC684171A274E001CDA22 /* rfeLeftViewController.h */,
-				0DBFC685171A274E001CDA22 /* rfeLeftViewController.mm */,
-				0DBFC686171A274E001CDA22 /* rfeRightViewController.h */,
-				0DBFC687171A274E001CDA22 /* rfeRightViewController.mm */,
-			);
-			name = "View Controllers";
-			sourceTree = "<group>";
-		};
 		0DBFC690171A2824001CDA22 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,32 +122,10 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		0DE99DC3171B4B140057BB4B /* App Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				0DBFC67E171A274E001CDA22 /* rfeAppDelegate.h */,
-				0DBFC67F171A274E001CDA22 /* rfeAppDelegate.mm */,
-				0DBFC682171A274E001CDA22 /* rfeJADebugViewController.h */,
-				0DBFC683171A274E001CDA22 /* rfeJADebugViewController.mm */,
-			);
-			name = "App Delegate";
-			sourceTree = "<group>";
-		};
-		0DE99DC4171B4B390057BB4B /* Custom Classes */ = {
-			isa = PBXGroup;
-			children = (
-				0DE99DB8171B1D0C0057BB4B /* rfeSession.h */,
-				0DE99DB9171B1D0C0057BB4B /* rfeSession.mm */,
-				0DE99DBB171B2A180057BB4B /* rfeSessionDataController.h */,
-				0DE99DBC171B2A180057BB4B /* rfeSessionDataController.m */,
-			);
-			name = "Custom Classes";
-			sourceTree = "<group>";
-		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* RfeOfJATest.app */,
+				1D6058910D05DD3D006BFB54 /* RfeOfJAstoryboards.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,11 +210,16 @@
 		E4D8936A11527B74007E1F53 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				0DE99DE9171B5A8C0057BB4B /* MainStoryboard.storyboard */,
 				0D459E88171A3B990096D10A /* Globals.h */,
 				0D459E89171A3B990096D10A /* Globals.mm */,
 				E4D8936B11527B74007E1F53 /* main.mm */,
 				E4D8936D11527B74007E1F53 /* testApp.mm */,
 				E4D8936C11527B74007E1F53 /* testApp.h */,
+				0DE99DEB171B5B700057BB4B /* rfeAppDelegate.h */,
+				0DE99DEC171B5B700057BB4B /* rfeAppDelegate.mm */,
+				0DF319A4171C51FA007E1B95 /* rfeSidePanelController.h */,
+				0DF319A5171C51FA007E1B95 /* rfeSidePanelController.m */,
 				bb265ea4218a70dc0c63e4794c54ed3b /* UI */,
 			);
 			path = src;
@@ -277,9 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				0DBFC690171A2824001CDA22 /* Source */,
-				0DE99DC3171B4B140057BB4B /* App Delegate */,
-				0DE99DC4171B4B390057BB4B /* Custom Classes */,
-				0D814727171C3E97005C294B /* View Controllers */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -287,9 +236,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* RfeOfJATest */ = {
+		1D6058900D05DD3D006BFB54 /* RfeOfJAstoryboards */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "RfeOfJATest" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "RfeOfJAstoryboards" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -301,9 +250,9 @@
 			dependencies = (
 				E41D410413B3A11300A75A5D /* PBXTargetDependency */,
 			);
-			name = RfeOfJATest;
+			name = RfeOfJAstoryboards;
 			productName = iPhone;
-			productReference = 1D6058910D05DD3D006BFB54 /* RfeOfJATest.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* RfeOfJAstoryboards.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -314,7 +263,7 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RfeOfJATest" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RfeOfJAstoryboards" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -335,7 +284,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* RfeOfJATest */,
+				1D6058900D05DD3D006BFB54 /* RfeOfJAstoryboards */,
 			);
 		};
 /* End PBXProject section */
@@ -357,6 +306,7 @@
 			files = (
 				0D459E8C171A406C0096D10A /* Icon@2x.png in Resources */,
 				0D459E8E171A40A20096D10A /* Icon.png in Resources */,
+				0DE99DEA171B5A8C0057BB4B /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,17 +335,11 @@
 			files = (
 				E4D8936E11527B74007E1F53 /* main.mm in Sources */,
 				E4D8936F11527B74007E1F53 /* testApp.mm in Sources */,
-				0DBFC688171A274E001CDA22 /* rfeAppDelegate.mm in Sources */,
-				0DBFC689171A274E001CDA22 /* rfeCenterViewController.mm in Sources */,
-				0DBFC68A171A274E001CDA22 /* rfeJADebugViewController.mm in Sources */,
-				0DBFC68B171A274E001CDA22 /* rfeLeftViewController.mm in Sources */,
-				0DBFC68C171A274E001CDA22 /* rfeRightViewController.mm in Sources */,
 				0DBFC695171A2824001CDA22 /* JASidePanelController.mm in Sources */,
 				0DBFC696171A2824001CDA22 /* UIViewController+JASidePanel.mm in Sources */,
 				0D459E8A171A3B990096D10A /* Globals.mm in Sources */,
-				0DE99DBA171B1D0C0057BB4B /* rfeSession.mm in Sources */,
-				0DE99DBD171B2A180057BB4B /* rfeSessionDataController.m in Sources */,
-				0DE99DC0171B31920057BB4B /* rfeSessionDetailViewController.m in Sources */,
+				0DE99DED171B5B700057BB4B /* rfeAppDelegate.mm in Sources */,
+				0DF319A6171C51FA007E1B95 /* rfeSidePanelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +362,7 @@
 				GCC_PREFIX_HEADER = iPhone_Prefix.pch;
 				INFOPLIST_FILE = "ofxiphone-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = RfeOfJATest;
+				PRODUCT_NAME = RfeOfJAstoryboards;
 				VALID_ARCHS = "armv6 armv7";
 			};
 			name = Debug;
@@ -430,7 +374,7 @@
 				GCC_PREFIX_HEADER = iPhone_Prefix.pch;
 				INFOPLIST_FILE = "ofxiphone-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = RfeOfJATest;
+				PRODUCT_NAME = RfeOfJAstoryboards;
 				VALID_ARCHS = "armv6 armv7";
 			};
 			name = Release;
@@ -505,7 +449,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "RfeOfJATest" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "RfeOfJAstoryboards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -514,7 +458,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RfeOfJATest" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RfeOfJAstoryboards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
