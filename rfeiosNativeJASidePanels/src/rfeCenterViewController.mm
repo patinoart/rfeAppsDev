@@ -23,12 +23,7 @@
 @synthesize titleLabel;
 @synthesize cellTitleLabel;
 
-- (void)awakeFromNib {
-    
-    [super awakeFromNib];
-    
-    self.dataController = [[rfeSessionDataController alloc] init];
-}
+
 
 - (void)viewDidLoad
 {
@@ -38,7 +33,7 @@
     titleLabel = @"Center Page";
     
     self.navigationItem.title = titleLabel;
-    
+    self.dataController = [[rfeSessionDataController alloc] init];
 
     
 //    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil];
@@ -47,10 +42,6 @@
     
 //    self.view.backgroundColor = [UIColor whiteColor];
 //    
-//    UITableView *tableView = [[[UITableView alloc] init] autorelease];
-//    tableView.dataSource = self;
-//    tableView.delegate = self;
-//    [self.view addSubview:tableView];
     
 }
 
@@ -67,8 +58,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.dataController countOfList];
     NSLog(@"Count of List is %i", [self.dataController countOfList]);
+    return [self.dataController countOfList];
 }
 
 // Customize the appearance of table view cells.

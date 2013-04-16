@@ -19,7 +19,7 @@
 		0DBFC696171A2824001CDA22 /* UIViewController+JASidePanel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFC694171A2824001CDA22 /* UIViewController+JASidePanel.mm */; };
 		0DE99DBA171B1D0C0057BB4B /* rfeSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99DB9171B1D0C0057BB4B /* rfeSession.mm */; };
 		0DE99DBD171B2A180057BB4B /* rfeSessionDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99DBC171B2A180057BB4B /* rfeSessionDataController.m */; };
-		0DE99DC0171B31920057BB4B /* rfeSessionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99DBF171B31920057BB4B /* rfeSessionDetailViewController.m */; };
+		0DE99DC0171B31920057BB4B /* rfeSessionDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99DBF171B31920057BB4B /* rfeSessionDetailViewController.mm */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
@@ -78,7 +78,7 @@
 		0DE99DBB171B2A180057BB4B /* rfeSessionDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeSessionDataController.h; sourceTree = "<group>"; };
 		0DE99DBC171B2A180057BB4B /* rfeSessionDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rfeSessionDataController.m; sourceTree = "<group>"; };
 		0DE99DBE171B31920057BB4B /* rfeSessionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeSessionDetailViewController.h; sourceTree = "<group>"; };
-		0DE99DBF171B31920057BB4B /* rfeSessionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rfeSessionDetailViewController.m; sourceTree = "<group>"; };
+		0DE99DBF171B31920057BB4B /* rfeSessionDetailViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rfeSessionDetailViewController.mm; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* RfeOfJATest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RfeOfJATest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -131,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				0DE99DBE171B31920057BB4B /* rfeSessionDetailViewController.h */,
-				0DE99DBF171B31920057BB4B /* rfeSessionDetailViewController.m */,
+				0DE99DBF171B31920057BB4B /* rfeSessionDetailViewController.mm */,
 				0DBFC680171A274E001CDA22 /* rfeCenterViewController.h */,
 				0DBFC681171A274E001CDA22 /* rfeCenterViewController.mm */,
 				0DBFC684171A274E001CDA22 /* rfeLeftViewController.h */,
@@ -395,7 +395,7 @@
 				0D459E8A171A3B990096D10A /* Globals.mm in Sources */,
 				0DE99DBA171B1D0C0057BB4B /* rfeSession.mm in Sources */,
 				0DE99DBD171B2A180057BB4B /* rfeSessionDataController.m in Sources */,
-				0DE99DC0171B31920057BB4B /* rfeSessionDetailViewController.m in Sources */,
+				0DE99DC0171B31920057BB4B /* rfeSessionDetailViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +461,7 @@
 					src/Apps,
 					src/UI,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -494,7 +494,7 @@
 					src/Apps,
 					src/UI,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
