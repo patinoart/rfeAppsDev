@@ -1,0 +1,1 @@
+Sound Switch is an openFrameworks app for iOS that allows you to control audio output through either audio channel (LEFT/RIGHT/BOTH), including controlling the frequency of the signal, the type (sine / square) and the volume.
