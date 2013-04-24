@@ -18,7 +18,7 @@
 		0DBFC695171A2824001CDA22 /* JASidePanelController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFC692171A2824001CDA22 /* JASidePanelController.mm */; };
 		0DBFC696171A2824001CDA22 /* UIViewController+JASidePanel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFC694171A2824001CDA22 /* UIViewController+JASidePanel.mm */; };
 		0DE99DBA171B1D0C0057BB4B /* rfeSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99DB9171B1D0C0057BB4B /* rfeSession.mm */; };
-		0DE99DBD171B2A180057BB4B /* rfeSessionDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99DBC171B2A180057BB4B /* rfeSessionDataController.m */; };
+		0DE99DBD171B2A180057BB4B /* rfeSessionDataController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99DBC171B2A180057BB4B /* rfeSessionDataController.mm */; };
 		0DE99DC0171B31920057BB4B /* rfeSessionDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99DBF171B31920057BB4B /* rfeSessionDetailViewController.mm */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -76,7 +76,7 @@
 		0DE99DB8171B1D0C0057BB4B /* rfeSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rfeSession.h; path = src/rfeSession.h; sourceTree = SOURCE_ROOT; };
 		0DE99DB9171B1D0C0057BB4B /* rfeSession.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = rfeSession.mm; path = src/rfeSession.mm; sourceTree = SOURCE_ROOT; };
 		0DE99DBB171B2A180057BB4B /* rfeSessionDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeSessionDataController.h; sourceTree = "<group>"; };
-		0DE99DBC171B2A180057BB4B /* rfeSessionDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rfeSessionDataController.m; sourceTree = "<group>"; };
+		0DE99DBC171B2A180057BB4B /* rfeSessionDataController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rfeSessionDataController.mm; sourceTree = "<group>"; };
 		0DE99DBE171B31920057BB4B /* rfeSessionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfeSessionDetailViewController.h; sourceTree = "<group>"; };
 		0DE99DBF171B31920057BB4B /* rfeSessionDetailViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = rfeSessionDetailViewController.mm; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -170,7 +170,7 @@
 				0DE99DB8171B1D0C0057BB4B /* rfeSession.h */,
 				0DE99DB9171B1D0C0057BB4B /* rfeSession.mm */,
 				0DE99DBB171B2A180057BB4B /* rfeSessionDataController.h */,
-				0DE99DBC171B2A180057BB4B /* rfeSessionDataController.m */,
+				0DE99DBC171B2A180057BB4B /* rfeSessionDataController.mm */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -394,7 +394,7 @@
 				0DBFC696171A2824001CDA22 /* UIViewController+JASidePanel.mm in Sources */,
 				0D459E8A171A3B990096D10A /* Globals.mm in Sources */,
 				0DE99DBA171B1D0C0057BB4B /* rfeSession.mm in Sources */,
-				0DE99DBD171B2A180057BB4B /* rfeSessionDataController.m in Sources */,
+				0DE99DBD171B2A180057BB4B /* rfeSessionDataController.mm in Sources */,
 				0DE99DC0171B31920057BB4B /* rfeSessionDetailViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
