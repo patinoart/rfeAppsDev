@@ -26,11 +26,13 @@ public:
     
     ofColor buttonColor;
     ofColor highlightColor;
+    ofColor labelColor;
     
     ofTrueTypeFont buttonLabel;
     string buttonLabelName;
     
     void setup(string _buttonName, float _x, float _y, float _w, float _h);
+    void style(ofColor _default, ofColor _highLight, ofColor _labelColor);
     void update(bool _bisClicked, ofPoint _mouse);
     void draw();
     bool buttonEvent(float _x, float _y);

@@ -26,6 +26,19 @@ void ofxRfeUIButton::setup(string _buttonName, float _x, float _y, float _w, flo
     
     highlightColor.setHex(0xed3f00);
     
+    labelColor.setHex(0x000000);
+    
+}
+
+//------------------------------------------------------------------
+void ofxRfeUIButton::style(ofColor _default, ofColor _highLight, ofColor _labelColor){
+    
+    buttonColor = _default;
+    
+    highlightColor = _highLight;
+    
+    labelColor = _labelColor;
+    
 }
 
 //------------------------------------------------------------------
@@ -62,7 +75,7 @@ void ofxRfeUIButton::draw() {
     
     
     ofPushStyle();
-    ofSetColor(255);
+    ofSetColor(labelColor);
     buttonLabel.drawString(buttonLabelName, x+(w/2)-(buttonLabel.stringWidth(buttonLabelName)*0.5f), y+h-(buttonLabel.stringHeight(buttonLabelName)));
     //cout << "getSize: " << buttonLabel.getSize() << endl;
     ofPopStyle();
