@@ -28,16 +28,26 @@ void testApp::setup(){
     intensityLabel = "INTENSITY";
     freqLabel = "FREQUENCY";
     timeLabel = "DURATION";
+    startButtonLabel = "START";
     
-    // SETUP MENUS
-    menuLabelX = 15;
-    menuLabelY = 715;
-    menuMargin = 40;
-    
-    
+    float areaMenuH = 0;
+
     // UI ELEMENT POSITIONS AND DIMENSIONS
-    if (ofGetHeight() == 1136) menuH = 100;
-    if (ofGetHeight() == 960) menuH = 25;
+    // Default device is iPhone 5
+    // Conditional is set to change vars associated with the height of the iPhone4 screen, 960px Retina screen
+    // No conditionals for non retina displays
+    
+    menuH = 100;
+    areaMenuH = menuH - 31.25;
+    
+    
+    if (ofGetHeight() == 960) {
+        menuH = 75;
+        areaMenuH = menuH - 17.5;
+        cout << "Area Menu Height: " << areaMenuH << endl;
+        menuLabelY = 600;
+
+    }
     
     menuX = 0;
     menuY = 100;
@@ -49,7 +59,7 @@ void testApp::setup(){
     sliderW = menuW;
     sliderH = menuH;
     
-    float topMargin = 20;
+    int topMargin = 2;
     
     menuClick = false;
     
@@ -83,45 +93,47 @@ void testApp::setup(){
     
     // SETUP MENUS, BUTTONs, SLIDERS
     // Area
-    areaMenu.setup(areaLabel, menuX, menuY, menuW, menuH-40);
-    areaMenu.style(blueGray, blueDark, textColor);
+    areaMenu.setup(areaLabel, menuX, menuY, menuW, areaMenuH);
+    areaMenu.style(blueLight, red, textColor);
     areaMenu.loadItems(areaList);
     areaMenu.itemNameSelected = "Choose Body Part";
     
     // Before
-    beforeSlider.setup(beforeLabel, sliderX, sliderY + menuH + topMargin, sliderW, sliderH, 0, 10);
-    beforeSlider.style(blueGray, blueDark, textColor);
+    beforeSlider.setup(beforeLabel, sliderX, areaMenuH + sliderY + topMargin, sliderW, sliderH, 0, 10);
+    beforeSlider.style(blueLight, red, textColor);
     
     // Intensity
-    intensityMenu.setup(intensityLabel, menuX, menuY + 2*(menuH + topMargin), menuW, menuH);
-    intensityMenu.style(blueGray, blueDark, textColor);
+    intensityMenu.setup(intensityLabel, menuX, areaMenuH + menuY + menuH + 2*topMargin, menuW, menuH);
+    intensityMenu.style(blueLight, red, textColor);
     intensityMenu.loadItems(intensityList);
     intensityMenu.itemNameSelected = "Choose Intensity";
     
     // Frequency
-    freqMenu.setup(freqLabel, menuX, menuY + 3*(menuH + topMargin), menuW, menuH);
-    freqMenu.style(blueGray, blueDark, textColor);
+    freqMenu.setup(freqLabel, menuX, areaMenuH + menuY + 2*menuH + 3*topMargin, menuW, menuH);
+    freqMenu.style(blueLight, red, textColor);
     freqMenu.loadItems(freqList);
     freqMenu.itemNameSelected = "Choose Speed";
     
     // Duration = Time device is ACTIVE
-    timeSlider.setup(timeLabel, sliderX, sliderY + 4*(sliderH + topMargin), sliderW, sliderH, 1, 5);
-    timeSlider.style(blueGray, blueDark, textColor);
+    timeSlider.setup(timeLabel, sliderX, areaMenuH + menuY + 3*sliderH + 4*topMargin, sliderW, sliderH, 1, 5);
+    timeSlider.style(blueLight, red, textColor);
     
+    // SETUP MENUS
+    menuLabelX = 15;
+    menuLabelY = areaMenuH + menuY + 5*menuH + 5*topMargin;
+    menuMargin = 40;
 
-    settingsImg.loadImage("images/navButton.png");
-    startImg.loadImage("images/startButton.png");
-
-    
     settingsX = 20;
     settingsY = 20;
     startImgX = 0;
     startImgY = 730;
     
-    settingsViewButton.setup("Nav", settingsX, settingsY, settingsImg.width, settingsImg.height);
-    settingsViewButton.style(blueGray, blueDark, textColor);
-    startButton.setup("Start", startImgX, ofGetHeight()-startImg.height, startImg.width, startImg.height);
-    startButton.style(blueGray, blueDark, textColor);
+    settingsViewButton.setup("Nav", 20, 20, 100, 60);
+    settingsViewButton.style(blueLight, red, textColor);
+    startButton.setup(startButtonLabel, 0, ofGetHeight()-100, ofGetWidth(), 100);
+    startButton.style(blueLight, red, textColor);
+    stopButton.setup("STOP", 0, ofGetHeight()-100, ofGetWidth(), 100);
+    stopButton.style(blueLight, red, textColor);
     
     bSettingsClick = false;
     bStartBClick = false;
@@ -139,9 +151,10 @@ void testApp::setup(){
 	phase = 0;
 	phaseAdder = 0.0f;
 	phaseAdderTarget = 0.0;
-	volume = 0.75f;
-	pan = 0.0;
+	volume = 0.90f;
+	pan = 1.0;
 	bNoise = false;
+    targetFrequency = 0;
     
     //for some reason on the iphone simulator 256 doesn't work - it comes in as 512!
 	//so we do 512 - otherwise we crash
@@ -158,7 +171,7 @@ void testApp::setup(){
 	phaseAdderTarget = (targetFrequency / (float)sampleRate) * TWO_PI;
 	
 	ofSoundStreamSetup(2, 0, this, sampleRate, initialBufferSize, 4);
-    ofSoundStreamStop();
+    ofSoundStreamStart();
 
     
 	ofSetFrameRate(60);
@@ -176,6 +189,7 @@ void testApp::update(){
     // BUTTONS
     settingsViewButton.update(bSettingsClick, user);
     startButton.update(bStartBClick, user);
+    stopButton.update(bStartBClick, user);
     
     // SLIDERS
     beforeSlider.update(beforeSMove);
@@ -184,7 +198,7 @@ void testApp::update(){
 //    volume = volSlider.value;
 //    pan = panSlider.value;
     
-//    phaseAdderTarget = (targetFrequency / (float)sampleRate *TWO_PI);
+    phaseAdderTarget = (targetFrequency / (float)sampleRate *TWO_PI);
     //cout << "mouseX: " << touchPos.x << ", " << "mouseY: " << touchPos.y << endl;
 }
 
@@ -203,7 +217,7 @@ void testApp::draw(){
     menuLabels.drawString(intensityLabel+": "+selIntensityString, menuLabelX, menuLabelY+2*menuMargin);
     menuLabels.drawString(freqLabel+": "+selFreqString, menuLabelX, menuLabelY+3*menuMargin);
     menuLabels.drawString(timeLabel+": "+selTime, menuLabelX, menuLabelY+4*menuMargin);
-    string theDate = ofToString(ofGetDay());
+    string theDate = ofToString(ofGetMonth()) + " / " + ofToString(ofGetDay()) + " / " + ofToString(ofGetYear());
     menuLabels.drawString("Date: "+theDate, menuLabelX, menuLabelY+5*menuMargin);
     
     // Draw Menus Sliders Buttons
@@ -213,7 +227,11 @@ void testApp::draw(){
     beforeSlider.draw();
     timeSlider.draw();
     
-    startButton.draw();
+    if (bStart) {
+        stopButton.draw();
+    } else {
+        startButton.draw();
+    }
     
     freqMenu.draw();
     intensityMenu.draw();
@@ -221,9 +239,9 @@ void testApp::draw(){
     
     // Header Label
     ofSetColor(ofColor::white);
-    int headerPosX = ofGetWidth()*0.5f - headerLabel.stringWidth("New Session")*0.5f;
-    int headerPosY = 100 - headerLabel.stringHeight("New Session");
-    headerLabel.drawString("New Session", headerPosX, headerPosY);
+    int headerPosX = ofGetWidth()*0.5f - headerLabel.stringWidth("(renforce)")*0.5f;
+    int headerPosY = 100 - headerLabel.stringHeight("(renforce)");
+    headerLabel.drawString("(renforce)", headerPosX, headerPosY);
     
 }
 
@@ -255,10 +273,10 @@ void testApp::audioOut(float * output, int bufferSize, int nChannels){
         float sample = 0;
         
         //if (bSin) {
-            sample = sin(phase);              // Sine wave
+        //sample = sin(phase);              // Sine wave
         //}
         //if (bSquare) {
-          //  sample = sin(phase)>0?1:-1;     // Square wave
+            sample = sin(phase)>0?1:-1;     // Square wave
         //}
         
         //float sample = fmod(phase, TWO_PI);     // Saw wave NOT WORKING NOW
@@ -344,8 +362,19 @@ void testApp::touchUp(ofTouchEventArgs & touch){
     if (freqMenu.bisHit) {
         // when you touch up the freq menu
         selFreqString = freqMenu.itemNameSelected;
+        bStart = true;
+        ofSoundStreamStart();
+        pan = 0.5;
+        volume = 0.99;
+        if (selFreqString == freqMenu.itemList.at(1)) {         // NORMAL
+            targetFrequency = 2.75f;
+        } else if (selFreqString == freqMenu.itemList.at(2)) {  // FAST
+            targetFrequency = 3.0f;
+        } else {                                            // SLOW
+            targetFrequency = 2.5f;
+        }
+
     }
-    
     // SLIDER
     beforeSMove = false;
     timeSMove = false;
@@ -358,10 +387,18 @@ void testApp::touchUp(ofTouchEventArgs & touch){
     
     if (settingsViewButton.bisHit) {
         // do something
+        cout << "SettingsView Button isHit touchUp" << endl;
     }
     
     if (startButton.bisHit) {
         // do something
+        cout << "Start Button isHit touchUp" << endl;
+        bStart = !bStart;
+        ofSoundStreamStart();
+    }
+    
+    if (stopButton.bisHit) {
+        ofSoundStreamStop();
     }
     
     /*

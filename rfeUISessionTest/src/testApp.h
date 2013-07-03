@@ -32,40 +32,40 @@ class testApp : public ofxiPhoneApp{
     
         // RFE SESSION TEST
     
-    // GLOBAL COLORS
-    ofColor red, blueGray, blueLight, blueMed, blueDark;
-    ofColor textColor;
+        // GLOBAL COLORS
+        ofColor red, blueGray, blueLight, blueMed, blueDark;
+        ofColor textColor;
+        
+        // BACKGROUND VARIABLES
+        ofTrueTypeFont headerLabel, menuLabels;
+        float menuLabelX, menuLabelY, menuMargin;
+        string areaLabel, beforeLabel, intensityLabel, freqLabel, timeLabel;
+        
+        // Menus
+        ofxRfeUIDDMenu areaMenu, intensityMenu, freqMenu;
+        float menuX, menuY, menuW, menuH;
+        bool menuClick;
+        vector <string> areaList, intensityList, freqList;
+        string selAreaString, selIntensityString, selFreqString;
+        
+        // Sliders
+        ofxRfeUIStepSlider beforeSlider, timeSlider;
+        float sliderX, sliderY, sliderW, sliderH;
+        bool beforeSMove, timeSMove;
+        string selBefore, selTime;
+        
+        // Button (Navigation Bar, Start Button)
+        ofxRfeUIButton settingsViewButton, startButton, stopButton;
+        float settingsX, settingsY, startImgX, startImgY;
+        bool bSettingsClick, bStartBClick, bStart;
+        string startButtonLabel;
     
-    // BACKGROUND VARIABLES
-    ofTrueTypeFont headerLabel, menuLabels;
-    float menuLabelX, menuLabelY, menuMargin;
-    string areaLabel, beforeLabel, intensityLabel, freqLabel, timeLabel;
-    
-    // Menus
-    ofxRfeUIDDMenu areaMenu, intensityMenu, freqMenu;
-    float menuX, menuY, menuW, menuH;
-    bool menuClick;
-    vector <string> areaList, intensityList, freqList;
-    string selAreaString, selIntensityString, selFreqString;
-    
-    // Sliders
-    ofxRfeUIStepSlider beforeSlider, timeSlider;
-    float sliderX, sliderY, sliderW, sliderH;
-    bool beforeSMove, timeSMove;
-    string selBefore, selTime;
-    
-    // Image Button (Navigation Bar, Start Button)
-    ofxRfeUIButton settingsViewButton, startButton;
-    ofImage settingsImg, startImg;
-    float settingsX, settingsY, startImgX, startImgY;
-    bool bSettingsClick, bStartBClick, bStart;
-    
-    // USER Variables
-    ofPoint user;
-    
-    // Create Class to contain one session
-    
-    // AUDIO SETUP
+        // USER Variables
+        ofPoint user;
+        
+        // Create Class to contain one session
+        
+        // AUDIO SETUP
             
         float pan;
         int sampleRate;
